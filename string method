@@ -1,0 +1,180 @@
+// 1. const text = "JavaScript"; svvliin characteriin indexiig ol.
+const suuliinhiigOloh = (text)=>{
+   const last = text.length-1
+   return {text,last}
+}
+const sct = suuliinhiigOloh("JavaScript")
+console.log(sct);
+
+
+// 2. const letter = "A"; ascii table deerh codiig ol.
+
+const asciiTable=(letter)=>{
+    return letter
+}
+const letter = asciiTable("A".charCodeAt(0))
+console.log(letter);
+
+// 3. const str = "JavaScript"; Script gedeg vgiig salgaj aw
+
+const scriptUgiigSalgah=(text)=>{
+const resum = text.slice(4)
+return resum
+}
+const s=scriptUgiigSalgah("JavaScript")
+console.log(s);
+
+
+// 4. const sentence = "I like cats"; cats gdeg ugiig dogs oor solino uu
+
+const uguulberiinUgSolih =(text)=>{
+   const oruulahUg=text.replace("cats", "dogs")
+    return {oruulahUg}
+}
+const a=uguulberiinUgSolih("I like cats")
+console.log(a);
+
+// 5. const msg = "wow wow wow"; wow gdeg ugiig haha bolgoj solino uu.
+
+const ugSolih =(text)=>{
+    const solih = text.replaceAll("wow","haha")
+    return solih
+}
+const solih = ugSolih("wow wow wow")
+console.log(solih);
+
+// 6. const sentence = "apple,banana,orange"; , aar ni salgana uu.
+
+const textShalgah =(text)=>{
+    const shalgah = text.split(",")
+    return shalgah
+}
+const d =textShalgah("apple,banana,orange")
+console.log(d);
+
+// 7. const email = "sumiya@gmail.com"; email esehiig shalga.
+
+const emailEshiigShalgah =(email)=>{
+    if(! email.includes("@")) return false
+        if(!email.includes(".")) return false
+        if (email.startsWith("@") || email.endsWith("@")) return false
+            return true
+}
+const q= emailEshiigShalgah("sumiya@gmail.com")
+console.log(q);
+
+// 8. const laugh = "haha"; 5 udaa dawtaj shine string uusge.
+
+const laugh=(text)=>{
+    const str =text.repeat(5)
+    return{str, text}
+}
+const w=laugh("haha ")
+console.log(w);
+
+// 9. const msg = "apple ++++ banana  ++++apple"; msg ees  "apple banana apple" gsen string vvsge.
+
+const stringeesHasah=(text)=>{
+const hasah = text.split("+").join("")
+return hasah
+}
+const e= stringeesHasah("apple ++++ banana  ++++apple")
+console.log(e);
+
+//  10. const text = "javascript"; ehnii usgiin UpperCase bolgo.
+
+const upperCaseBolgoh =(text)=>{
+    const ehniiUseg= text[0].toUpperCase()
+    const slice = text.slice(1)
+    return ehniiUseg + slice
+}
+
+const r= upperCaseBolgoh("javascript")
+console.log(r);
+
+// 11. "Javascript is fun" дотор "fun" үгийн байршлын index-г ол.
+
+const indexiigOl=(text)=>{
+ const loc = text.split("Javascript is").join("")
+ const index = loc.length-1
+ return {loc, index}
+}
+const t=indexiigOl("Javascript is fun")
+console.log(t);
+
+// 12. "a,b,c,d" → бүх , ийг  - тэмдэгтээр солино
+
+const temdegSolih =(text)=>{
+    const solih = text.split(",").join("-")
+    return solih
+}
+const f=temdegSolih("a,b,c,d")
+console.log(f);
+
+// 13. JavaScript хэдэн гийгүүлэгч хэдэн эгшиг байгааг тоол.
+
+const egshigGiiguulegchiinToogOloh=(text) =>{
+    const egshig = "aeiouAEIOU"; 
+    let egshgiinToo = 0;
+    let giiguulegchiinToo = 0;
+
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        if ((char >= "A" && char <= "Z") || (char >= "a" && char <= "z")) {
+            if (egshig.includes(char)) {
+                egshgiinToo++;
+            } else {
+                giiguulegchiinToo++;
+            }
+        }
+    }
+
+    return { egshgiinToo, giiguulegchiinToo };
+}
+const c = egshigGiiguulegchiinToogOloh("JavaScript")
+console.log(c);
+
+
+// 14. "1234567890" сүүлийн 4 оос бусад тоог нь * оор орлуул
+
+const num= "1234567890" 
+const l=""
+const tooSolih =(num)=>{
+   const toonuud = num.length - 4;   
+  const nuguu6 = "*".repeat(toonuud);
+  const last4 = num.slice(-4);      
+  return nuguu6 + last4;
+}
+const x=tooSolih(num)
+console.log(x);
+
+// 15. Өгүүлбэр доторх хамгийн урт үгийг ол. Example "I love JavaScript programming" → "programming"
+ 
+// let text ="I love JavaScript programming"
+// const uguulberiinHamgiinUrtUgiigOl=(text)=>{
+// const over = text[2]
+// return {over,text}
+// }
+// const v=uguulberiinHamgiinUrtUgiigOl("I love JavaScript programming")
+// console.log(v);
+
+let text= "I love JavaScript programming"
+let tx1=text[0]
+
+for(let i=0;i<=text.length;i++){
+if(tx1<text){
+    tx1=text
+}
+}console.log(tx1);
+
+const ugnuud = text.split(" "); 
+let maxWord = ugnuud[0];
+
+for (let i = 1; i < ugnuud.length; i++) {
+    if (ugnuud[i].length > maxWord.length) {
+        maxWord = ugnuud[i]; // илүү урт үгийг хадгалах
+    }
+}
+
+console.log("Хамгийн урт үг:", maxWord);
+console.log("Урт:", maxWord.length);
