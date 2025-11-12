@@ -1,0 +1,483 @@
+// const gurvaljiniiPremetr = (a, b, c) => {
+// return a+ b+ c
+// }
+// const rd =gurvaljiniiPremetr
+// console.log(rd( 6, 5, 6));
+
+
+// // 2dah bod niilber
+
+// const niilber = (a,q,w,e,er) => {
+//     return a+q+w+e+parseInt(er)
+// }
+// const rr = niilber
+// console.log(rr(1,3,5,7,8.7));
+
+// 3dah bod S,P ol
+
+// const add = (a,b) => {
+//     const talbai = a*b
+//     const permetr = (a+b)*2
+//     return {
+//         talbai , permetr
+//     }
+// }
+// const address = add(10,5)
+// console.log(address.talbai);
+// console.log(address.permetr);
+
+// // 4deh
+
+// const hugatsaa = (a) => {
+//    const min=Math.floor(a/60)
+//    const sec = a%60
+//    return { min,sec}
+// }
+// const as= hugatsaa (98)
+// console.log(as)
+
+// // 5dah
+
+// const time = (a) => {
+//     const hour =Math.floor(a/60)
+//     const min1 =(a%60)
+//     const sec1 = a%60
+//     return {
+//         hour,min1,sec1
+//     }
+// }
+// const aa=time (1297)
+// console.log(aa);
+
+// // 6dah
+// const hugaTsaa =(a,b) => {
+//     const min = a*60
+//     const sec =b
+//     return {
+//         min ,sec
+//     }
+// } 
+// const asa =hugaTsaa (875,88)
+// console.log(asa);
+
+
+// // 7 dah
+
+// const dahiadHugatsaa =(a,b,c) =>{
+//     const hour = Math.floor (a*60)
+//     const min =hour+(b*60)
+//     const sec =min+c
+//     return hour+min+sec
+    
+// }
+// const ss= dahiadHugatsaa (83,84,85)
+// console.log(ss);
+
+
+// // const dahiadHugats =(a,b,c) =>{
+// //     const hour = Math.floor (a*60)
+// //     const min =hour*60
+// //     const sec =hour*60
+// //     return hour,min,sec
+    
+// // }
+// // const ssa= dahiadHugatsaa (83,84,85)
+// // console.log(`${sss.a}`);
+
+// const dahiadHugats = (a, b, c) => {
+//   const hour = a*3600
+//   const min = b*60
+//   const sec = c
+//   return { hour, min,sec}
+// };
+
+// const sss = dahiadHugats(83, 84, 85);
+// console.log(sss);
+
+// // 10.28nii
+// // 1deh bod
+
+// const dhiadHugtsaa = (a)=> {
+//     const day =  Math.floor(a/24)
+//     const hour = a%24
+//    return {day,hour}
+// }
+// const qq =dhiadHugtsaa (38)
+// console.log(qq);
+
+// // 2dah
+
+// const dhiadHugtsa = (a,b)=>{
+//     const day =a*24
+//     const hour =b
+//     return {day,hour}
+// }
+// const qw =dhiadHugtsa (4,40)
+// console.log(qw);
+
+// // 3dahi 
+
+// const sar= (a) => {
+//     const year = Math.floor(a/12)
+// const month = a%12
+//     return {year,month}
+// }
+// const s= sar (106)
+// console.log(s);
+
+// // 4deh 
+
+// const time1 =(a,b)=>{
+// const year =a*12
+// const month = Math.floor(b/12)
+// const month1 = b%12
+// return {
+//     year,month,month1
+// }
+// }
+// const qe= time1(90,98)
+// console.log(qe);
+
+
+// // 5dh 
+
+// const bagaToo =(a,b,c,d) =>{
+// const baga = Math.min(a,b,c,d)
+// return baga
+// }
+// const qr= bagaToo(9,3,2,8)
+// console.log(qr);
+
+// // 6 deh 
+
+// const dahiadBagaToo = (a,b,c,d)=> {
+// let urjver = 1
+// let max =5
+// if (a <5){
+//     urjver *=a
+// }
+// if (b <5){
+//     urjver *=b
+// }
+// if (c <5){
+//     urjver *=c
+// }
+// if (d <5){
+//     urjver *=d
+// }
+// return urjver === 1 ? {max:0, urjver:0}: {max, urjver}
+// }
+// const zaa = dahiadBagaToo (11,9,4,3)
+// console.log(zaa);
+
+
+// // 7 dahi 
+
+// const dahiadIkhToo = (a,b,c,d)=> {
+// let urjver = 1
+// let ikh =5
+// if (a >5){
+//     urjver *=a
+// }
+// if (b >5){
+//     urjver *=b
+// }
+// if (c >5){
+//     urjver *=c
+// }
+// if (d >5){
+//     urjver *=d
+// }
+// return urjver === 1 ? {ikh:0, urjver:0}: {ikh, urjver}
+// }
+// const za = dahiadIkhToo (11,9,4,3)
+// console.log(za);
+
+// // 10.28nii bodlogo ehniih
+
+// const hoyrToo= ( a,b)=>{
+//     const ikh = Math.max(a,b)
+    
+//     return ikh;
+// }
+// const zs =hoyrToo(12,41)
+// console.log(zs);
+
+// // 2dah bod ni
+
+// const hoyrToonii = (a, b) => {
+//   const aType = a % 2 === 0 ? "тэгш" : "сонгой";
+//   const bType = b % 2 === 0 ? "тэгш" : "сонгой";
+
+//   return { a, aType, b, bType };
+// }
+
+// const zx = hoyrToonii(12, 17);
+// console.log(zx);
+
+// // 3dah bod
+
+// const tooniiDundahMaxMin = (a,b,c)=>{
+//     const max= Math.max(a,b,c)
+//     const min=Math.min (a,b,c)
+//     return { max,min}
+// }
+// const da =tooniiDundahMaxMin( 14,3,1)
+// console.log(da);
+
+// // 4dah Стрингийн уртыг хэвлэх
+
+// const string = (a)=>{
+//     const urt = a.length
+// return urt
+// }
+// const fa = string("i am iron man")
+// console.log(fa);
+
+// // 5dah Стринг эхний болон сүүлчийн тэмдгийг нийлүүлэх
+
+// const ehniiSuuliinh = (a)=>{
+
+//     const last = a[0]+a[a.length -1];
+//    return {last}
+// }
+// const fs= ehniiSuuliinh('hulk')
+// console.log(fs);
+
+// // 6dah Стрингийг том үсэг болгож хувиргах
+
+
+// const toUpperCaseString= (str) =>{
+//   return str.toUpperCase();
+// }
+
+// console.log(toUpperCaseString("ave world")); 
+
+// // 7dah Стринг дотор тодорхой тэмдэгт байгаа эсэхийг шалгах.
+
+// const world = (s, a) => {
+//   return s.includes(a);
+// }
+// const ahs= world("banana","n")
+// const jaj= world("banana","p")
+// console.log(ahs,jaj);
+
+
+// // 8 dah Тоог 3-аар болон 5-аар хуваагддаг эсэхийг шалгах. 3-т хуваагдал Fizz, 5-т хуваагдал Buzz, хоюуланд нь хуваагддаг бол FizzBuzz гэх хэвлэ
+
+// const blaBla = (a, b, c) => {
+//   const fizzBuzz = (num) => {
+//     if (num % 3 === 0 && num % 5 === 0) return "FizzBuzz";
+//     if (num % 3 === 0) return "Fizz";
+//     if (num % 5 === 0) return "Buzz";
+//   return (num)
+//   }
+
+//   return {
+//     a: fizzBuzz(a),
+//     b: fizzBuzz(b),
+//     c: fizzBuzz(c)
+//   };
+// }
+
+// const ff = blaBla(12, 25, 15);
+// console.log(ff);
+
+// // 9. Хоёр string-ийг нэгтгэх a = Hello b = World
+
+// const halloween =(a,b)=>{
+//     return a+b
+// }
+// const gg = halloween("hello", "world")
+// console.log(gg);
+
+// // 10. 2 тооны дундаж
+
+// const dundaj =(a,b)=>{
+//     return (a+b)/2
+// }
+// const a= dundaj(12,43)
+// console.log(a);
+
+// // 11. Тоо эерэг эсвэл сөрөг эсэхийг шалгах
+
+// const tooShalgah =(a,b)=>{
+//     const aType = a%2===0 ? "эерэг": "сөрөг"
+//     const bType = b%2===0 ? "эерэг": "сөрөг"
+//     return { a,aType,b, bType}
+// }
+// const ak= tooShalgah(12,43)
+// console.log(ak);
+
+
+// // 12. Тоог 10-аас их эсэхийг шалгах
+
+// const dahiadShalgah = (a,b)=>{
+//     if(a>10){
+//         a=10 ? "unen":"hudal"
+//     }
+//     if(b>10){
+//         b=10 ? "unen" : "hudal"
+//     }
+//     return {a,b}
+// }
+// const faa= dahiadShalgah(12,4)
+// console.log(faa);
+
+// // 13. Хоёр тоо тэнцүү эсэхийг шалгах
+
+// const tentsuuYuu =(a,b)=>{
+//     const jaj= (a===b) ?  "тэнцүү" : "ялгаатай"
+//     return {jaj}
+// }
+// const qwd= tentsuuYuu(12,3)
+// console.log(qwd);
+
+// // 14. Тоог 100-аас бага, 0-аас их эсэхийг шалгах 
+
+// const tooDahiadShalgah =(a,b,c)=>{
+//     if(a>100){
+//         a=100
+//     } if(a<0){
+//         a=0
+//     }
+//     if(b>100){
+//         b=100
+//     } if(b<0){
+//         b=0
+//     }
+//      if(c>100){
+//         c=100
+//     } if(c<0){
+//         c=0
+//     }
+//     return{a,b,c} ? "unen": "hudal"
+// }
+// const asc= tooDahiadShalgah(12,3,-1)
+// console.log(asc);
+
+// // 15. Тоог 10%, 20% эсвэл 30% өсгөх
+
+// const toogUsguh =(a)=>{
+//     const jaj=(a/10)+a
+//     const jaj1=(a/20)+a
+//     const jaj2=(a/30)+a
+//     return {jaj, jaj1,jaj2}
+// }
+// const frq= toogUsguh(12)
+// console.log(frq);
+
+// // 16. Тоог 100-аас хэтэрвэл 100 болгож хэвлэх
+
+// const toogNemeh =(a,b)=>{
+// const kak = a>100  
+// const aka = b>100 && 100
+// return {kak,aka}
+// }
+// const sxa=toogNemeh(12,411)
+// console.log(sxa);
+
+// // 17. Хоёр тэмдэгт ижил эсэхийг шалгах === ашиглах
+
+// const temdegtShalgah =(a,b,c,d)=>{
+// const kaka =(a===b) ? "same": "not"
+// const kakaa =(c===d) ? "same": "not"
+// return {kaka,kakaa}
+// }
+// const sca=temdegtShalgah(12,12,"hello","ha")
+// console.log(sca);
+
+// // 18. Хоёр оронтой тооны цифрүүдийг сольж урвуулах
+
+// const solih =(a)=>{
+//   const tens = Math.floor(a / 10);
+//   const ones = a % 10 ;  
+//   return ones * 10 + tens;  
+// }
+// const daa=solih(32)
+// console.log(daa);
+
+// // 19. Тоо сөрөг бол эерэг болгож, эерэг бол хэвээр үлдээх
+
+// const tooHuvirgah = (a,b)=>{
+//    if (a < 0) a = -a;
+//   if (b < 0) b = -b;
+//     return {a,b}
+// }
+// const xa= tooHuvirgah(-12,33)
+// console.log(xa);
+
+// // 20. 1970.01.01 -ээс яг одоог хүртэл хэдэн он, сар, өдөр, цаг, минут, секунд, дооль, милисекунд өнгөрсөнг ол
+
+// const nuguuOnSar = () => {
+//   const days = Math.floor(Date.now() / 86400000);       // нийт өдрүүд
+//   const y = Math.floor(days / 365);                  // жил
+//   const mo = Math.floor((days % 365) / 30);       // сар
+//   const d = Math.floor((days % 365) % 30);        // өдөр
+//   return { y, mo, d };
+// };
+
+// console.log(nuguuOnSar());
+
+
+// // 21. Дугаарын хязгаарлалтаар машин чинь хэд хэд дэх өдөр явахгүйг хэвлэнэ
+
+// const dugaariinHyzgaarlalt=(a) =>{
+//   const suuliinDugaar = parseInt(a.toString().slice(-1));
+
+//   const udruud = {
+//     0: "monday",
+//     1: "tuesday",
+//     2: "wednesday",
+//     3: "thursday",
+//     4: "friday",
+//     5: "monday",
+//     6: "tuesday",
+//     7: "wednesday",
+//     8: "thursday",
+//     9: "friday"
+//   };
+
+//   return `mashin ${udruud[suuliinDugaar]} yvahgui`;
+// }
+
+// const jcb = dugaariinHyzgaarlalt(9184);
+// console.log(jcb); 
+
+
+// // 1. ["🥩", "🌾", "🥔", "🥕", "🥬"] array iin length iig ol.
+
+// const jimsnuud =(a,b,c,d,e)=>{
+//     return jimsnuud.length
+// }
+// const ass = jimsnuud("🥩", "🌾", "🥔", "🥕", "🥬")
+// console.log(ass);
+
+// // 2 .10 urttai number array uusge.
+
+// const arr = (a)=>{
+// }
+
+// // 3. 5 urttai string array uusge.
+// // 4. Массивын эхний ба сүүлийн элементийг харуул. [1,2,3,4,5,6,7]
+
+// const massiviinEhniiSuuliinh = (arr) => {
+//   const ehnii = arr[0];
+//   const suuliin = arr[arr.length - 1];
+//   return { ehnii, suuliin };
+// };
+
+// // Туршилт
+// const hh = massiviinEhniiSuuliinh([1, 2, 3, 4, 5, 6, 7]);
+// console.log(hh);
+
+
+
+// // 5. Тодорхой элемент массив дотор байгаа эсэхийг шалга. (string array, ['ford', "toyota", "mercedes", " chevrolet ", "tesla", "byd"])
+// // 6. Массив дахь хамгийн их тоог ол. (number array , [1,2,3,4,5,6,7])
+// // 7. Массив дахь хамгийн бага тоог ол. (number array, [1,2,3,4,5,6,7])
+// // 8. Зөвхөн тэгш тоонуудыг шүүн гарга. (number array, [1,2,3,4,5,6,7])
+// // 9. Тодорхой тоо массив дотор хэдэн удаа орсныг тоол. (number array, [ 2,3 , 1,6,7,10,11,2] , 2 )
+// // 10. Бүх тоонуудыг 2 дахин үржүүлсэн шинэ массив үүсгэ. (number array, [1,2,3,4,5,6,7])
+// // 11. Бүх үгсийг том үсгээр (uppercase) болго. ([a, b, c, d, e ,f])
+// // 12. Бүх үгсийг жижиг үсгээр (lowercase) болго. ([A,B,C,D,E,T,Y,I,O,F])
