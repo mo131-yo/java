@@ -1,0 +1,165 @@
+// 1. Хүний нэр, нас, хот гэсэн 3 properties объект үүсгэ.
+
+const newWorld={
+    name: "gon",
+    age:"16",
+    city:"Ub"
+}
+console.log(newWorld);
+
+// 2. Объект дотор байгаа name шинж чанарын утгыг хэвлэ.
+const ne ={
+    name: "gon",
+    age:"16",
+    city:"Ub"
+}
+console.log(ne.name);
+// 3. person.age утгыг шинэчлээд 30 болго.
+
+const person= {
+name: "alastor",
+age:"12",
+}
+console.log({...person, age:"30"});
+
+// 4. person объектод шинэ job шинж чанар нэмээд 'developer' гэж оноо.
+
+const ene ={
+    name: "gon",
+    age:"16",
+    city:"Ub",
+    job: "hunter"
+}
+console.log({...ene,job:"developer"});
+
+// 5. delete ашиглан person объектын city propertyg устга.
+
+const that ={
+    name: "gon",
+    age:"16",
+    city:"Ub",
+    job: "hunter"
+}
+delete that.city;
+
+console.log(that);
+
+// 6. Хоёр объект (user1, user2)-ийг Object.assign() ашиглан нэгтгэ.
+
+const user1 ={
+    age:"161",
+    city:"erdenet",
+    job: "hunter"
+}
+const user2={
+    name: "kill",
+    age:"15",
+    body:"male",
+}
+const obj = Object.assign({},user1,user2)
+console.log(obj);
+
+// 7. Object.keys() ашиглан объектын бүх түлхүүрүүдийг массив болгон ав.
+
+const hotel={
+    name: "husk",
+    age:"32",
+    body:"male",
+}
+const wolf =Object.keys(hotel)
+console.log(wolf);
+
+// 8. Object.values() ашиглан бүх утгуудыг массив болгон ав.
+
+const bat={
+    name: "baatar",
+    age:"12",
+    body:"male",
+}
+const dust = Object.values(bat)
+console.log(dust);
+
+// 9. Object.entries() ашиглан түлхүүр-утгын хосуудыг массив болгон ав.
+
+const loid={
+    name: "loid",
+    age:"22",
+    body:"male",
+}
+const yor={
+    name: "yor",
+    age:"20",
+    body:"female",
+}
+
+const loidEnt = Object.entries(loid);
+const yorEnt = Object.entries(yor);
+
+console.log(loidEnt);
+console.log(yorEnt);
+
+// 10. Объект дотор тодорхой түлхүүр ("email") байгаа эсэхийг 'email' in user хэлбэрээр шалга.
+
+const key = {
+    email: " shhac@.com",
+    age:"21",
+    name:"peter"
+}
+const jennifer = "email" in key
+console.log(jennifer);
+
+// 11. for...in давталт ашиглан объектын бүх түлхүүр болон утгуудыг хэвлэ.
+
+const lois = {
+    email: " shhac@.com",
+    age:"21",
+    name:"peter"
+}
+for (const key in lois) {
+    console.log(key,":", lois[key]);
+}
+
+// 12. Object.freeze() ашиглан объектын утгыг өөрчлөх боломжгүй болгож оролдоод турш.
+
+
+
+// 13. Хоёр объектын утгуудыг spread (...) ашиглан нэг шинэ объект үүсгэ.
+// 14. Хоосон объект үүсгээд дараалан өөрийн хүссэн 3 properties g  нэм.
+// 15. Нэг объектын тодорхой утгыг өөр объект руу хуулах (clone) үйлдэл хийгээрэй.
+
+
+
+// 16. Объектын бүх түлхүүрийг length-ээр тоол.
+
+const cloud = {
+    email: " cloudsee@.com",
+    name:"white",
+    body:"none"
+}
+const leg = Object.keys(cloud).length
+
+console.log(leg);
+
+
+// 17. Object.hasOwnProperty() ашиглан user объектод password байгаа эсэхийг шалга.
+
+
+
+// 18. JSON.stringify() ашиглан объектоо string болгон хөрвүүл.
+
+const country = {
+    land: "japan",
+    lord:"none",
+    body:"5million",
+    cost:"high"
+}
+console.log(JSON.stringify(country));
+
+
+// 19. JSON.parse() ашиглан string-ийг буцааж объект болгож хөрвүүл.
+
+const avatar = '{"cost":"high","land":"japan","lord":"none","body":"5million"}';
+const katara = JSON.parse(avatar);
+
+console.log(katara);    
+console.log(katara.cost);   
