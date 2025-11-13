@@ -1,0 +1,244 @@
+// 1. greet(name, callback) — “Hello, [name]!” гэж хэвлээд дараа нь callback-ийг дууд.
+
+const greet =( name, callback)=>{
+    console.log(`Hello, ${name}!`);
+    callback();
+};
+
+const printHello =() =>{
+    console.log("hello11");
+};
+
+greet("James", printHello);
+
+// 2. add(a, b, callback) — 2 тоог нийлүүлээд үр дүнг callback-р буцаа.
+
+const secondFuction= (a, b, callback)=>{
+    const templateString = `${a}, ${b};`
+    callback (templateString)
+}
+
+const print =(text)=>{
+    console.log(text);
+    
+}
+secondFuction(1,2,print)
+
+// 3. calculateSquare(num, callback) — тооны квадратыг тооцоод callback-д дамжуул.
+
+const calculateSquare= (num, callback) =>{
+    const kvadrat= `${num*num}`
+    callback ( kvadrat)
+}
+
+const printing=(text)=>{
+    console.log(text);
+}
+calculateSquare(4,printing)
+
+// 4. sayGoodbye(callback) — “Goodbye!” гэж хэвлээд дараа нь callback-г ажиллуул
+
+const  sayGoodbye=(text, callback)=>{
+    const ug =`${text}`
+    callback(ug)
+}
+
+const printed =(text)=>{
+    console.log(text);
+}
+
+sayGoodbye("Goodbye!", printed)
+
+// 5. displaySum(a, b, callback) — нийлбэрийг тооцоод callback ашиглан хэвлэ
+
+const displaySum = (a, b, callback)=>{
+    const haru = `${a+b};` 
+    callback(haru)
+}
+const printer=(num)=>{
+    console.log(num);
+}
+displaySum(2,3,printer)
+
+// 6. checkEven(num, callback) — тоо тэгш эсэхийг шалгаад үр дүнг callback-д өг
+
+const checkEven=(num, callback)=>{
+    const tegsh = `${num%2 ===0 && "tegsh"}`
+    const bish = `${num % 2 ===1 && "bish"}`
+   
+    callback(tegsh, bish)
+}
+const printet =(num)=>{
+    console.log(num);
+}
+
+checkEven(3,printet)
+
+// 7. showAlert(callback) — confirm("Continue?") true бол callback-г ажиллуул
+
+const showAlert=(callback)=>{
+    const confirm=`${"Contine"=== "Contine"}`
+    callback( confirm)
+}
+const prin= (text)=>{
+    console.log(text);
+}
+showAlert(prin)
+
+// 8. repeatThreeTimes(callback) — callback-г 3 удаа ажиллуул.
+
+const repeatThreeTimes= (callback) =>{
+  callback()
+   callback()
+    callback()
+}
+const printt= ()=>{
+    console.log("callback");
+}
+repeatThreeTimes(printt)
+
+// 9. printArray(arr, callback) — массивын элемент бүрт callback-г ажиллуул.
+
+const printArray= (arr, callback)=>{
+   for(let i=0;i<arr.length;i++){
+    callback(arr[i])
+   }
+}
+const printy=(callback)=>{
+    console.log(callback);
+    
+}
+printArray([3,1,6],printy)
+
+// 10. getLength(str, callback) — string-ийн уртыг callback-р буцаа.
+
+const getLength=(str, callback)=>{
+    const leg =`${str.length}`
+    callback(leg)
+}
+const prine =(text)=>{
+    console.log(text);
+}
+getLength(["ncnakc","acjb","jbdsvhsdvhsdvs"],prine)
+
+// 11.toUpperCase(str, callback) — үгийг том үсэг болгон callback-д өг.
+
+const toUpperCase=(str, callback)=>{
+    const big = str.toUpperCase();
+    callback(big)
+}
+const pp=(text)=>{
+    console.log(text);
+}
+toUpperCase("chris",pp)
+
+// 12. randomNumber(callback) — 1–10 хооронд санамсаргүй тоо гаргаад callback-д өг.
+
+const randomNumber=(callback)=>{
+    const random= Math.floor(Math.random() * 10) + 1
+    callback(random);
+};
+const pf=(num)=>{
+    console.log(num);
+}
+randomNumber(pf)
+
+// 13. checkPositive(num, callback) — тоо эерэг эсэхийг шалгаад callback-д функцээр хэвлэ.
+
+const checkPositive= (num, callback)=>{
+    const eyreg = `${num%2 ===0 && " eyreg"}`
+    const surug = `${num%2 ===1 && " surug"}`
+    callback(eyreg,surug)
+}
+const pfp=(num)=>{
+    console.log(num);
+}
+checkPositive(10,pfp)
+
+// 14. checkStringLength(str, callback) — урт нь 5-аас урт эсэхийг callback-д функцээр хэвлэ.
+
+const checkStringLength=(str, callback)=>{
+    const urt =`${str.length>5 && "urt"}`
+     const bogino =`${str.length<5 && "short"}`
+    callback(urt,bogino)
+}
+const pdp=(text)=>{
+    console.log(text);
+}
+checkStringLength("afachha",pdp)
+// 15. checkStartsWith(str, char, callback) — string тухайн үсгээр эхэлж байгаа эсэхийг callback-д функцээр хэвлэ
+
+const checkStartsWith=(str, char, callback)=>{
+   
+    const word = str.startsWith(char);
+    callback(word)
+}
+const dp=(text)=>{
+    console.log(text);
+}
+checkStartsWith("star","jacb",dp)
+
+
+// 16. checkLogin(username, password, callback) — зөв хэрэглэгчийг шалгаад callback-д функцээр true false хэвлэ.
+
+
+// 17. isAdult(age, callback) — нас 18-аас дээш бол true-г callback-д өг.
+
+const isAdult=(age, callback)=>{
+   
+    if(age>18){age=18 && true
+        console.log(age);
+    }else{ age<18 && false}
+}
+const dd=(num)=>{
+    console.log(num);
+}
+isAdult("20",dd)
+
+// 18. checkNumberType(num, callback) — тоо сондгой эсвэл тэгш гэдгийг callback-д өг.
+
+const checkNumberType=(num, callback)=>{
+
+ const toot = (num % 2 === 0) ? "тэгш" : "сонгодой";
+callback(toot)
+}
+const aa=(num)=>{
+    console.log(num);
+}
+checkNumberType("19", aa)
+
+// 19. printEach(arr, callback) — массивын элемент бүрт callback-г ажиллуул.
+
+// const printEach= (arr, callback)=>{
+    
+// }
+// const a=(text)=>{
+//     console.log(text);
+// }
+// printEach("haha", a)
+
+// 20. repeatNTimes(n, callback) — callback-г n удаа ажиллуул.
+
+
+// 21. countToFive(callback) — 1-ээс 5 хүртэл тоо хэвлээд дараа нь callback-г дуудаж “Done” гэж хэл.
+
+const countToFive=(callback)=>{
+
+ for(let i=1;i<=5;i++){
+ }
+}
+const qa=(num)=>{
+    console.log(num);
+}
+countToFive("Done", qa)
+
+// 22. sumArray(arr, callback) — нийлбэрийг тооцоод callback-д дамжуул.
+
+const sumArray=(arr, callback)=>{
+const ar= arr+callback
+callback ( ar)
+}
+const pop=(num)=>{
+    console.log(num);
+}
+countToFive(12,13,pop)
