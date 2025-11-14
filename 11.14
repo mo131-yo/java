@@ -1,0 +1,164 @@
+// 1. Доторх үгсийг урвуу болгох
+// Эхний болон сүүлийн үгийг өөрчлөхгүй.
+// Жишээ:
+// Оролт: "JavaScript бол үнэхээр сонирхолтой хэл"
+// Гаралт: "JavaScript лоб рээхнеүн йотлохронис хэл"
+// 
+
+
+const uguulberUrvuulah = (text) => {
+    const words = text.split(" ");
+    let result = [];
+
+    for (let i = 0; i < words.length; i++) {
+
+        if (i === 0 || i === words.length - 1) {
+            result.push(words[i]);
+        } else {
+            const reversed = words[i].split("").reverse().join("");
+            result.push(reversed);
+        }
+    }
+
+    return result.join(" ");
+};
+
+const text = "JavaScript бол үнэхээр сонирхолтой хэл";
+console.log(uguulberUrvuulah(text));
+
+
+
+const uguulberUrvuulan = (text) => {
+    const ugnuud = text.split(" ");
+    const ehnii = ugnuud.shift();    
+    const suuliin = ugnuud.pop();  
+
+    for (let i = 0; i < ugnuud.length; i++) {
+        ugnuud[i] = ugnuud[i].split("").reverse().join("");
+    }
+    return `${ehnii} ${ugnuud.join(" ")} ${suuliin}`;
+};
+
+const urDun = uguulberUrvuulan("JavaScript бол үнэхээр сонирхолтой хэл");
+console.log(urDun);
+
+
+// 2. Өгүүлбэр дэх давтагдахгүй үсгүүдийг тоолох (том жижиг ялгахгүй)
+// Зөвхөн a–z үсгийг тоолно.
+// Оролт: "Сайн уу?"
+// Гаралт: 4
+
+
+const dagdahUgnuuShalgah=(text)=>{
+let counter =0;
+const davtagdsan={};
+for ( let char of text ){
+    const haragdahUseg= davtagdsan[char];
+    if (char>= "a" && char <= "z"){
+        if (!haragdahUseg){
+            davtagdsan[char] =1;
+counter++ ;
+    }else{
+        delete davtagdsan[char]
+        counter--
+    }
+    }
+    }
+    return counter
+}
+const wor= dagdahUgnuuShalgah("sain uu")
+console.log(wor);
+
+// 3. Давхардсан үсгүүдийг арилгаж дарааллыг хадгалах
+// Оролт: "aabbccddeeff"
+// Гаралт: "abcdef"
+
+
+const davhardsaniigHasah=(text)=>{
+const haragdsan= {}
+ let result = "";  
+
+    for (let chat of text) {
+        if (!haragdsan[chat]) { 
+            result+= chat
+            haragdsan[chat] = true
+        }
+    }
+    return result
+}
+const hhoh= davhardsaniigHasah("aabbccddeeff")
+console.log(hhoh);
+
+
+// 4. kebab-case → camelCase болгох
+// Оролт: "hello-world-example"
+// Гаралт: "helloWorldExample"
+
+const kababToCamel =(text)=>{
+ const usegnuuds= text.split("-")
+ let egg= usegnuuds[0]
+for (let i=1;i<usegnuuds.length;i++){
+    const world=usegnuuds[i]
+    const ehniiUsegTomruulah = world[0].toUpperCase()+world.slice(1)
+    egg+=ehniiUsegTomruulah
+}
+return egg
+}
+const akc= kababToCamel("hello-world-example")
+console.log(akc);
+
+
+// const tex = camelCase("hello-world-example")
+// console.log(tex);
+
+// const kebabToCamel = (text) => {
+//     const words = text.split("-");
+//     return words
+//         .map((w, i) =>
+//             i === 0 ? w : w[0].toUpperCase() + w.slice(1)
+//         )
+//         .join("");
+// };
+
+// console.log(kebabToCamel("hello-world-example"));
+
+
+// 5. Урт нь 4-өөс их бол дундах үсгүүдийг “*” болгох
+// Эхний 2 ба сүүлийн 2 үлдэнэ.
+// Оролт: "mongolia"
+// Гаралт: "mo****ia"
+
+const dundahUsegnuudiigUrchluh=(text)=>{
+    if( text.length<4){
+        return text
+    }
+    let result =""
+    for(i=0;i<text.length;i++){
+        if(i<2 || i>= text.length-2){
+            result+=text[i]
+        }else{
+            result += "*"
+        }
+    }
+return result
+}
+const ugs= dundahUsegnuudiigUrchluh("mongolia")
+console.log(ugs);
+
+
+
+   const hababcjabjb=(text)=>{
+       if( text.length<=4){
+        return text
+    }
+    const jaha= text.slice(0,2)
+    const gaga= "-".repeat(jaha.length)
+         const ehnii2= text.slice (2,3)
+    const suuliin2= text.slice(-3)
+    const dundah = "*".repeat(text.length-4)
+
+    return gaga+ehnii2+dundah+ suuliin2
+   }
+   const a=hababcjabjb("mongolia")
+console.log(a);
+
